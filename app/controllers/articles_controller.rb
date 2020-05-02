@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all 
+    @articles = [] if @articles == nil
+    
   end
   
   def new
