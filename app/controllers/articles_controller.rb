@@ -31,8 +31,8 @@ class ArticlesController < ApplicationController
   end
   
   def edit 
-    
-  end  
+    @user = User.find(params[:id])
+  end
   
   def update
     if @article.update(article_params)
