@@ -19,6 +19,15 @@ class UsersController < ApplicationController
     
   end
   
+  def show
+    @user = User.find(params[:id])
+    @articles = @user.articles
+  end
+  
+  def index 
+    @users = User.all
+  end
+  
   def update
     
     if @user.update(user_params)
